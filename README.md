@@ -102,19 +102,13 @@ The project uses an edge-first architecture with Cloudflare Workers to deliver l
 
 ---
 
-## 📸 Screenshots
+## 🚀 Live Demo
 
-⚠️ Screenshots represent the current testnet/demo interface.
+Testnet environment is live and accessible:
 
-| Home | Explorer | Testnet |
-|------|----------|---------|
-| ![Home](docs/screenshots/home.png) | ![Explorer](docs/screenshots/explorer.png) | ![Testnet](docs/screenshots/testnet.png) |
+🔗 https://www.pozzer.io/
 
----
-
-## 🚀 Demo
-
-Local environment fully functional and ready for testing.
+The platform allows wallet connection, interaction with missions, and real-time backend validation.
 
 ---
 
