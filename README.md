@@ -1,4 +1,4 @@
-# Pozzer — DePIN Protocol for Real-World Web3 Applications
+#  Pozzer — DePIN Protocol for Real-World Web3 Applications
 
 > DePIN protocol for decentralized infrastructure participation and reward systems
 
@@ -95,6 +95,18 @@ Built with an edge-first architecture using Cloudflare Workers, Pozzer focuses o
 
 ---
 
+##  Demo Environment
+
+This project includes a **testnet/demo environment** with:
+
+* Simulated node distribution for visualization
+* Real backend architecture and API structure
+* Wallet-based authentication and reward logic
+
+The focus is on system design, scalability, and Web3 integration.
+
+---
+
 ##  Documentation
 
 Technical documentation available in the `/docs` folder:
@@ -108,7 +120,7 @@ Technical documentation available in the `/docs` folder:
 
 ##  Run Locally
 
-```bash
+```bash id="i0w6zo"
 npm install
 npm run dev
 ```
@@ -119,7 +131,7 @@ Create a `.env` file based on `.env.example`
 
 ##  Environment Variables (.env.example)
 
-```env
+```env id="n9pz2t"
 WALLETCONNECT_PROJECT_ID=
 JWT_SECRET=
 API_KEY=
@@ -164,4 +176,3 @@ web3 • depin • cloudflare-workers • react • typescript • walletconnect
 Full-stack Web3 DePIN protocol with multi-chain wallet integration, gamification system, and enterprise-level security (9.0/10). Built using React, TypeScript, Cloudflare Workers, and edge database architecture.
 
 ---
-
