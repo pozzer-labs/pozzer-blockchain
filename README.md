@@ -1,4 +1,4 @@
-Pozzer - DePIN Protocol for Real-World Web3 Applications
+# Pozzer - DePIN Protocol for Real-World Web3 Applications
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
@@ -7,16 +7,15 @@ Pozzer - DePIN Protocol for Real-World Web3 Applications
 
 Full-stack Web3 DePIN protocol with multi-chain wallet integration, gamification, and enterprise-level security, built with React, TypeScript, Cloudflare Workers, and edge-native data architecture.
 
-🌟 Overview
+## 🌟 Overview
 
-Pozzer is a portfolio-ready DePIN (Decentralized Physical Infrastructure Network) platform that enables users to participate in decentralized infrastructure through wallet-based interaction, mission validation, and reward distribution.
-The project uses an edge-first architecture with Cloudflare Workers to deliver low-latency API responses, scalable backend logic, and secure multi-chain integration.
+Pozzer is a portfolio-ready DePIN (Decentralized Physical Infrastructure Network) platform that enables users to participate in decentralized infrastructure through wallet-based interaction, mission validation, and reward distribution. The project uses an edge-first architecture with Cloudflare Workers to deliver low-latency API responses, scalable backend logic, and secure multi-chain integration.
 
-🚀 Demo
+## 🚀 Demo
 
 No public live demo yet. Demo visuals and public environment links will be added soon.
 
-📸 Screenshots
+## 📸 Screenshots
 
 ⚠️ Screenshots represent the current testnet/demo interface.
 
@@ -24,126 +23,89 @@ No public live demo yet. Demo visuals and public environment links will be added
 |------|----------|---------|
 | ![Home](docs/screenshots/home.png) | ![Explorer](docs/screenshots/explorer.png) | ![Testnet](docs/screenshots/testnet.png) |
 
+## 🔄 User Flow
 
+- Wallet Connection: User connects wallet (WalletConnect/Web3Modal).
+- Participation: User performs missions and platform interactions.
+- Backend Processing: Requests handled via REST APIs on the Edge.
+- Validation: Node/verification logic validates actions.
+- Rewards: progression and rewards are updated based on participation.
 
-🔄 User Flow
+## 🛠️ Core Components
 
-Wallet Connection: User connects wallet (WalletConnect/Web3Modal).
+- Web3 Authentication: Nonce + signature verification.
+- API Layer: Cloudflare Workers + Hono.
+- Node Logic: Worker / Verifier / Delegator simulation.
+- Gamification: Reward distribution and progression system.
+- Integration: Multi-chain layer (Ethereum, Polygon, BSC, Arbitrum).
+- Admin Dashboard: Review, moderation, and security monitoring.
 
-Participation: User performs missions and platform interactions.
+## 🏗️ Architecture
 
-Backend Processing: Requests handled via REST APIs on the Edge.
+- Frontend: React + TypeScript + React Router + Tailwind + UI components.
+- Backend: Cloudflare Workers (edge functions).
+- Database: Cloudflare D1 (edge-native relational DB).
+- Storage: Cloudflare R2.
+- Protocol Layer: Multi-chain interaction layer.
 
-Validation: Node/verification logic validates actions.
+## 👨‍💻 What I Built
 
-Rewards: progression and rewards are updated based on participation.
+- Full-stack Web3 architecture (frontend + worker backend + API).
+- Wallet-based authentication with signature verification.
+- Reward distribution and mission progression logic.
+- Multi-chain wallet onboarding and interaction layer.
+- Edge-first backend for low-latency request handling.
+- Security-first API with rate limiting, logging, and admin JWT auth.
 
-🛠️ Core Components
+## ⚡ Technical Challenges Solved
 
-Web3 Authentication: Nonce + signature verification.
+- Secure Auth: Wallet authentication without private key exposure.
+- Performance: Low-latency handling in serverless environments.
+- Scalability: Anti-abuse controls for reward mechanics.
+- UX: Multi-chain compatibility in a unified interface.
+- Modeling: Node-based participation and verification design.
 
-API Layer: Cloudflare Workers + Hono.
+## 📊 Project Highlights
 
-Node Logic: Worker / Verifier / Delegator simulation.
+- 20+ REST API endpoints.
+- 13 relational database tables.
+- 25+ React components.
+- Multi-wallet support via WalletConnect.
+- Edge deployment architecture (Cloudflare).
 
-Gamification: Reward distribution and progression system.
+## 🔐 Security
 
-Integration: Multi-chain layer (Ethereum, Polygon, BSC, Arbitrum).
+- Wallet signature verification (nonce-based).
+- JWT authentication + bcrypt password hashing (admin).
+- Multi-layer rate limiting (IP and wallet).
+- Request logging and suspicious activity tracking.
+- Input sanitization + strict endpoint controls.
 
-Admin Dashboard: Review, moderation, and security monitoring.
-
-🏗️ Architecture
-
-Frontend: React + TypeScript + React Router + Tailwind + UI components.
-
-Backend: Cloudflare Workers (edge functions).
-
-Database: Cloudflare D1 (edge-native relational DB).
-
-Storage: Cloudflare R2.
-
-Protocol Layer: Multi-chain interaction layer.
-
-👨‍💻 What I Built
-
-Full-stack Web3 architecture (frontend + worker backend + API).
-
-Wallet-based authentication with signature verification.
-
-Reward distribution and mission progression logic.
-
-Multi-chain wallet onboarding and interaction layer.
-
-Edge-first backend for low-latency request handling.
-
-Security-first API with rate limiting, logging, and admin JWT auth.
-
-⚡ Technical Challenges Solved
-
-Secure Auth: Wallet authentication without private key exposure.
-
-Performance: Low-latency handling in serverless environments.
-
-Scalability: Anti-abuse controls for reward mechanics.
-
-UX: Multi-chain compatibility in a unified interface.
-
-Modeling: Node-based participation and verification design.
-
-📊 Project Highlights
-
-20+ REST API endpoints.
-
-13 relational database tables.
-
-25+ React components.
-
-Multi-wallet support via WalletConnect.
-
-Edge deployment architecture (Cloudflare).
-
-🔐 Security
-
-Wallet signature verification (nonce-based).
-
-JWT authentication + bcrypt password hashing (admin).
-
-Multi-layer rate limiting (IP and wallet).
-
-Request logging and suspicious activity tracking.
-
-Input sanitization + strict endpoint controls.
-
-📂 Documentation
+## 📂 Documentation
 
 Technical docs are available in the docs folder:
 
-docs/ARCHITECTURE.md
+- docs/ARCHITECTURE.md
+- docs/SECURITY.md
+- docs/routes.md
 
-docs/SECURITY.md
+## 💻 Run Locally
 
-docs/routes.md
-
-💻 Run Locally
-
-Windows (PowerShell):
-
+### Windows (PowerShell)
+```powershell
 npm install
 copy .env.example .env
 npm run dev
-
-
-Linux/Mac:
-
-npm install
+```
+##    Linux/Mac
+```npm install
 cp .env.example .env
 npm run dev
-
+````
 
 🌐 Environment Variables (.env)
 
 Use .env.example as the source of truth.
-
 VITE_WALLETCONNECT_PROJECT_ID=your_id_here
 ADMIN_JWT_SECRET=your_secret_here
 AUTHORIZED_ADMIN_EMAILS=admin@example.com
@@ -169,7 +131,6 @@ NFT-related reward concepts for top participants.
 🤝 Community & Support
 
 Twitter: @pozzer_depin
-
 Telegram: t.me/pozzerpt
 
 Status: Testnet in development.
