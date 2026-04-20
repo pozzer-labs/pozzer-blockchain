@@ -5,8 +5,7 @@
 ![React](https://img.shields.io/badge/React-19.0-61DAFB)
 ![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-orange)
 
-Full-stack Web3 DePIN protocol with multi-chain wallet integration, gamification, and enterprise-level security, built with React, TypeScript, Cloudflare Workers, and edge-native data architecture.
-
+Production-oriented full-stack Web3 DePIN protocol focused on scalability, security, and real-world infrastructure participation.
 ---
 
 ## 🚀 Project Summary
@@ -115,7 +114,7 @@ The project uses an edge-first architecture with Cloudflare Workers to deliver l
 
 ## 🚀 Demo
 
-No public live demo yet. Demo visuals and public environment links will be added soon.
+Local environment fully functional and ready for testing.
 
 ---
 
@@ -174,6 +173,6 @@ NFT-related reward concepts for top participants.
 Twitter: @pozzer_depin
 Telegram: t.me/pozzerpt
 
-Status: Testnet in development.
+Status: Active development (testnet stage)
 
 Email: contato@pozzer.io
