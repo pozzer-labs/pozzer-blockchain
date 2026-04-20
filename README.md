@@ -1,178 +1,144 @@
-#  Pozzer — DePIN Protocol for Real-World Web3 Applications
+# Pozzer - DePIN Protocol for Real-World Web3 Applications
 
-> DePIN protocol for decentralized infrastructure participation and reward systems
+Full-stack Web3 DePIN protocol with multi-chain wallet integration, gamification, and enterprise-level security, built with React, TypeScript, Cloudflare Workers, and edge-native data architecture.
 
-Pozzer is a full-stack Web3 platform designed as a **DePIN (Decentralized Physical Infrastructure Network) protocol**, enabling users to participate in decentralized infrastructure through wallet-based interaction, task validation, and reward distribution.
+## Overview
 
-Built with an edge-first architecture using Cloudflare Workers, Pozzer focuses on scalability, low latency, and secure multi-chain integration.
+Pozzer is a portfolio-ready DePIN (Decentralized Physical Infrastructure Network) platform that enables users to participate in decentralized infrastructure through wallet-based interaction, mission validation, and reward distribution.
 
----
+The project uses an edge-first architecture with Cloudflare Workers to deliver low-latency API responses, scalable backend logic, and secure multi-chain integration.
 
-##  Demo
+## Demo
 
-> Demo visuals will be added soon.
+No public live demo yet. Demo visuals and public environment links will be added soon.
 
----
+## User Flow
 
-##  User Flow
+1. User connects wallet (WalletConnect/Web3Modal).
+2. User performs missions and platform interactions.
+3. Backend processes requests through REST APIs.
+4. Node/verification logic validates actions.
+5. Rewards and progression are updated based on participation.
 
-1. User connects wallet (WalletConnect)
-2. User interacts with the platform (tasks / validation)
-3. Backend processes actions via API
-4. Node logic validates interactions (simulated/distributed)
-5. Rewards are distributed based on participation
+## Core Components
 
----
+- Web3 authentication (nonce + signature verification)
+- API layer (Cloudflare Workers + Hono)
+- Node logic (Worker / Verifier / Delegator simulation)
+- Reward and gamification system
+- Multi-chain integration layer
+- Admin dashboard (review, moderation, security monitoring)
 
-##  Core Components
+## Architecture
 
-* Web3 authentication (wallet signature)
-* API layer (Cloudflare Workers)
-* Node system (Worker / Verifier / Delegator logic)
-* Reward & gamification system
-* Multi-chain integration layer
+- **Frontend:** React + TypeScript + React Router + Tailwind + UI components
+- **Backend:** Cloudflare Workers (edge functions)
+- **Database:** Cloudflare D1 (edge-native relational DB)
+- **Storage:** Cloudflare R2
+- **Protocol Layer:** Multi-chain interaction (Ethereum, Polygon, BSC, Arbitrum)
 
----
+## What I Built
 
-##  Architecture Overview
+- Full-stack Web3 architecture (frontend + worker backend + API)
+- Wallet-based authentication with signature verification
+- Reward distribution and mission progression logic
+- Multi-chain wallet onboarding and interaction layer
+- Edge-first backend for low-latency request handling
+- Security-first API with rate limiting, logging, and admin JWT auth
 
-* **Frontend:** React + Web3 wallet integration
-* **Backend:** Cloudflare Workers (edge computing)
-* **Database:** D1 (edge-native relational database)
-* **Node Layer:** Simulated Worker & Verifier nodes
-* **Protocol Layer:** Multi-chain interaction (Ethereum, Polygon, BSC, Arbitrum)
+## Technical Challenges Solved
 
----
+- Secure wallet authentication without private key exposure
+- Low-latency request handling in edge/serverless environments
+- Scalable reward mechanics with anti-abuse controls
+- Multi-chain compatibility in a unified UX
+- Node-based participation and verification model design
 
-##  Ecosystem
+## Project Highlights
 
-* Wallet integration (WalletConnect)
-* Payment layer (Web3 transactions)
-* Node dashboard
-* Gamified participation system
-* Token-based rewards
+- 20+ REST API endpoints
+- 13 relational database tables
+- 25+ React components
+- Multi-wallet support via WalletConnect
+- Edge deployment architecture (Cloudflare)
+- Security-focused backend design and monitoring
 
----
+## Security
 
-##  What I Built
+- Wallet signature verification (nonce-based)
+- JWT authentication + bcrypt password hashing (admin)
+- Multi-layer rate limiting (IP and wallet)
+- Request logging and suspicious activity tracking
+- Input sanitization + strict endpoint controls
 
-* Full-stack Web3 architecture (frontend + backend + API)
-* Wallet-based authentication using signature verification
-* Reward distribution and gamification logic
-* Multi-chain integration layer
-* Edge-first backend with low latency processing
-* Secure API with rate limiting and JWT authentication
+## Demo/Testnet Environment
 
----
+This portfolio version includes a testnet/demo environment with:
 
-##  Technical Challenges
+- Simulated node distribution for UX and visualization
+- Real backend architecture and API design
+- Wallet-based auth and reward logic
 
-* Secure authentication without exposing private keys
-* Handling low-latency requests in edge environments
-* Designing scalable reward distribution logic
-* Managing multi-chain compatibility
-* Structuring a node-based validation system
+Focus: architecture quality, system design, scalability, and Web3 integration.
 
----
+## Documentation
 
-##  Project Highlights
+Technical docs are available in the `docs` folder:
 
-* 22 RESTful API endpoints
-* 13 relational database tables
-* 25+ React components
-* Multi-wallet support via WalletConnect
-* Sub-100ms API response (edge architecture)
-* Security audit score: **9.0/10**
+- `docs/ARCHITECTURE.md`
+- `docs/SECURITY.md`
+- `docs/routes.md`
 
----
+## Run Locally
 
-##  Security
-
-* Wallet signature verification
-* JWT authentication + bcrypt
-* Multi-layer rate limiting
-* Request logging and monitoring
-
----
-
-##  Demo Environment
-
-This project includes a **testnet/demo environment** with:
-
-* Simulated node distribution for visualization
-* Real backend architecture and API structure
-* Wallet-based authentication and reward logic
-
-The focus is on system design, scalability, and Web3 integration.
-
----
-
-##  Documentation
-
-Technical documentation available in the `/docs` folder:
-
-* Architecture
-* API Reference
-* Security
-* Tokenomics
-
----
-
-##  Run Locally
-
-```bash id="i0w6zo"
+```bash
 npm install
+cp .env.example .env
 npm run dev
 ```
 
-Create a `.env` file based on `.env.example`
+Windows (PowerShell):
 
----
-
-##  Environment Variables (.env.example)
-
-```env id="n9pz2t"
-WALLETCONNECT_PROJECT_ID=
-JWT_SECRET=
-API_KEY=
-RPC_URL=
+```powershell
+npm install
+copy .env.example .env
+npm run dev
 ```
 
----
+## Environment Variables (`.env`)
 
-##  Limitations
+Use `.env.example` as the source of truth.
 
-* This is a portfolio version adapted from a larger system
-* Node network is partially simulated
-* Not a fully decentralized production network
+```bash
+VITE_WALLETCONNECT_PROJECT_ID=
+ADMIN_JWT_SECRET=
+AUTHORIZED_ADMIN_EMAILS=admin@example.com,admin2@example.com
+TESTNET_UNLOCK_DATE=2025-04-01T00:00:00Z
+TESTNET_EARLY_ACCESS_PASSWORD=
+API_KEY=
+```
 
----
+## Limitations
 
-##  Status
+- This is a portfolio-adapted version of a broader system.
+- Part of the node network behavior is simulated for demo usability.
+- It is not a fully decentralized production network.
 
- Testnet in development
- Portfolio-ready version available
+## Status
 
----
+Testnet in development - Portfolio-ready codebase available.
 
-##  Tokenomics (Overview)
+## Tokenomics (Overview)
 
-* 15% Airdrop
-* 30% Node rewards
-* Tier system (Explorer → Genesis Operator)
-* Reward multipliers (1.0x → 2.0x)
-* NFT rewards for top participants
+- Tiered participation model (Explorer -> Genesis Operator)
+- Reward multipliers
+- Mission-based progression
+- NFT-related reward concepts for top participants
 
----
+## Tags
 
-##  Tags
+`web3` `depin` `cloudflare-workers` `react` `typescript` `walletconnect` `decentralized` `fullstack`
 
-web3 • depin • cloudflare-workers • react • typescript • walletconnect • decentralized • fullstack
+## Suggested One-Line Description
 
----
-
-##  How to Describe This Project
-
-Full-stack Web3 DePIN protocol with multi-chain wallet integration, gamification system, and enterprise-level security (9.0/10). Built using React, TypeScript, Cloudflare Workers, and edge database architecture.
-
----
+Full-stack Web3 DePIN protocol with multi-chain wallet integration, gamification, and security-first edge architecture built on React, TypeScript, and Cloudflare Workers.
